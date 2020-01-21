@@ -79,7 +79,7 @@ describe('User is not logged in', async () => {
     const results = await page.execRequests(actions);
 
     for (let result of results) {
-      result.toEqual({ error: 'You must log in!' });
+      expect(result).toEqual({ error: 'You must log in!' });
     }
   });
 
